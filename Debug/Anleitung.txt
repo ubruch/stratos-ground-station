@@ -1,0 +1,5 @@
+In diesem Ordner befindet sich eine Datei zu Debug und Testzwecken.
+
+Bitte beachten: Korrekten Dateienpfad der Datenbank in "checkDB.py" angeben!
+
+Zum Starten bitte die "checkDB.py"-Datei ausführen.

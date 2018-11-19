@@ -1,0 +1,58 @@
+<html>
+<head>
+<link rel="stylesheet" href='../static/stylesheet.css' >
+</head>
+<body>
+
+<ul>
+	<li><a href="/">Home</a></li>
+	<li><a class="active" href="/docs">Documentation</a></li>
+	<li><a href="/lastData">Last Data</a></li>
+	<li><a href="/historicalData">Historical Data</a></li>
+	<li><a href="/logsData">Logs</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/about">About</a></li>
+</ul>
+
+<div style="margin-left:15%;padding:1px 16px;height:1000px;">
+	<h2>On this page we explain different parameters and concepts.</h2>
+	<h3>Paramters</h3>
+	<table width="100%" style ="text-align:center">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Example</th>
+			<th>Explanation</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Temperature</td>
+			<td>23°C</td>
+			<td>Temperature as measured by the Ballon</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Height</td>
+			<td>7500m</td>
+			<td>Height as measured by the Ballon</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Mission-ID</td>
+			<td>1</td>
+			<td>Mission-ID assigned to the Ballon</td>
+		</tr>
+	</table>
+	<h3>Accessing different Mission-ID's</h3>
+	<p>Our system defaults to Mission-ID 1.<br>
+	   If you want to access the latest Data or historical Data you can simply add a "?id=x" to the URL, whereas x is the ID you want to access.<br>
+	   For example: "&id=2" will display the latest Data or historical Data from Mission 2.</p>
+	<h3>Downloading Data</h3>
+	<p>If you want to download our Data there is a way to display it as a .json.<br>
+	   To do so add a "?mode=json" to the URL.<br>
+	   To change the Mssion-ID and display the Data as .json you can combine both methods, for example by adding "?id=2&mode=json".<br>
+	   This will display the Data of mission 2 as .json</p>
+</div>
+
+</body>
+</html>

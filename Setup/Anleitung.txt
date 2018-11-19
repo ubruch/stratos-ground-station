@@ -1,0 +1,5 @@
+Bitte beachten: Korrekten Dateienpfad der Datenbank in "createParamDB.py" und "createApiRestDb.py" angeben!
+
+Beide Dateien müssen, nachdem eine neue Datenbank angelegt wurde, ausgeführt werden.
+
+Sobald beide Dateien ausgeführt wurden müssen sie, solange nicht die Datenbank geändert wird, nicht erneut ausgeführt werden.

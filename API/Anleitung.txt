@@ -1,0 +1,11 @@
+In diesem Ordner sind die Dateien für die Weboberfläche/API.
+
+Bitte beachten: Korrekten Dateienpfad der Datenbank in "stratosApiRest.py" angeben!
+
+Zum Starten bitte die "stratosApiRest.py"-Datei ausführen.
+
+Zu Testzwecken kann nach erfolgreichem starten in einem Webbrowser über "localhost:5000" darauf zugegriffen werden, und der aktuelle Zustand betrachtet werden.
+
+Die Vorlagen der einzelnen Seiten befinden sich im Ordner "templates".
+
+Im Ordner "static" befinden sich das stylesheet.

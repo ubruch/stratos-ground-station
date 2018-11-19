@@ -1,0 +1,35 @@
+<html>
+<head>
+<link rel="stylesheet" href='../static/stylesheet.css' >
+</head>
+
+<body>
+
+<ul>
+	<li><a href="/">Home</a></li>
+	<li><a href="/docs">Documentation</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a class="active" href="/about">About</a></li>
+</ul>
+
+<div style="margin-left:15%;padding:1px 16px;height:1000px;">
+	<h2>Last parameters received from the sensors</h2>
+	<table width="100%" style ="text-align:center">
+	  <tr>
+			{% for name in names %}
+	    <th>{{name}}</th>
+			{% endfor %}
+	  </tr>
+		{% for param in lastValues %}
+			  <tr>
+					{% for name in names %}
+			    	<td>{{param[name]}}</td>
+					{% endfor %}	
+			  </tr>
+		{% endfor %}
+	</table>
+
+</div>
+
+</body>
+</html>

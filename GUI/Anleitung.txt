@@ -1,0 +1,7 @@
+Dieser Ordner enthält die Dateien der angedachten GUI, diese ist jedoch zum jetztigen Zeitpunkt leider nicht fertig gestellt.
+
+Angedacht ist es, dass der Standort und relevanten Daten, wie z.B. die Höhe,berechnetes Ziel, etc. , in Echtzeit angezeigt werden.
+
+Jetztiger Stand: Integrierte Map, funktionsfähig mit Zoom und verschieben
+		 Startkreis, eingezeichnet am HTW-Campus Alt-Saarbrücken(4er Bau etwa)
+		 Ende-Knopf, beendet den Vollbild Modus und schließt die GUI

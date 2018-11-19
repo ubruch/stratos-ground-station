@@ -1,0 +1,16 @@
+Bitte beachten: Korrekten Dateienpfad der Datenbank in "stratos.py" angeben!
+
+Vor erstmaligem benutzen bitte den Dateienpfad der Datenbank in allen Teilprogrammen überprüfen und den Setup-Ordner beachten.
+
+Die Datei "stratos.py" überprüft, wenn sie ausgeführt wird, den Ordner, in der sie sich befindet, auf .txt-Dateien. 
+Wenn eine .txt-Datei gefunden wurde wird diese ausgewertet, bei mehreren die .txt-Datei mit aktuellstem Timestamp, und die Datenpaare werden in die Datenbank eingetragen.
+
+Wenn ein unbekannte ID entdeckt wird, wird sie automatisch in der Datenbank eingefügt.
+
+Die Daten werden auf ihre Gültigkeit überprüft, d.h. Min.- und Max.-Werte. Falls ein Wert abweicht wird der Status des Handlers auf Error gesetzt.
+Insofern der Wert gültig ist wird der alte Wert in die historische Tabelle gelegt und der aktuelle Wert wird übernommen.
+
+Wenn eine neue Mission-ID erkann wird, werden dafür alle benötigten Tabellen automatisch angelegt.
+
+Die "stratos.py"-Datei muss regelmäßig von Hand neu ausgeführt werden, damit weiter Daten verarbeitet werden.
+

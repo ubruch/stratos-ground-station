@@ -1,0 +1,5 @@
+In diesem Ordner befindet sich die Datenbank, die zu den einzelnen Teilprogrammen gehört.
+
+In dieser Datenbank werden die verschiedenen Tables hinterlegt, die aus den Strings in den .txt-Dateien generiert werden.
+
+Es ist darauf zu achten, dass in den Teilprogrammen der richtige Pfad zur Datenbank hinterlegt ist.
