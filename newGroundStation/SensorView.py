@@ -5,8 +5,8 @@ from TemplateModule import *
 from PyQt5.QtWidgets import QHBoxLayout, QLabel
 
 class SensorView(TemplateModule):
-	def __init__(self, name, width, height):
-		super(SensorView, self).__init__(name,width,height)
+	def __init__(self, name, width, height, parent):
+		super(SensorView, self).__init__(name, width, height, parent)
 		self.value = "No current Value"
 	
 	#Override paintEvent to display custom Content

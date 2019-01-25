@@ -8,8 +8,8 @@ from PyQt5.QtGui import QPainter, QPalette, QColor, QFont
 from PyQt5.QtCore import *
 
 class TemplateModule(QFrame):
-	def __init__(self, name, height, width):
-		super(TemplateModule, self).__init__()
+	def __init__(self, name, height, width, parent):
+		super(TemplateModule, self).__init__(parent)
 		self.name = name
 		self.resize(height,width)
 		#set basic custom look for all stratos ui elements
