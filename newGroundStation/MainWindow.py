@@ -3,6 +3,7 @@
 
 from PyQt5.QtWidgets import QMainWindow, QWidget, QPushButton
 from Template import *
+from Settings import *
 
 class MainWindow(QMainWindow):
 	def __init__(self):
@@ -20,5 +21,9 @@ class MainWindow(QMainWindow):
 		self.optionsButton.setFixedSize(40,40)
 		font = self.optionsButton.font()
 		font.setPointSize(30)
+		font.setBold(True)
 		self.optionsButton.setFont(font)
 		#ToDo: Create Settings Menu and connect it
+		self.settingsMenu = Settings(self)
+		self.settingsMenu.hide()
+		self.optionsButton.clicked.connect(self.settingsMenu.show)
