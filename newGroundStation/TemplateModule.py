@@ -1,11 +1,11 @@
 #created by jwenner
 #edited by jwenner
 
-#Superclass of all custom stratos widgets
-
+#Superclass of all custom stratos widgets, sets style etc
 from PyQt5.QtWidgets import QFrame
 from PyQt5.QtGui import QPainter, QPalette, QColor, QFont
 from PyQt5.QtCore import *
+from time import sleep
 
 class TemplateModule(QFrame):
 	def __init__(self, name, height, width, parent):
@@ -29,3 +29,14 @@ class TemplateModule(QFrame):
 		painter.setFont(font)
 		painter.drawText(event.rect(), Qt.AlignLeft, self.name)
 		QFrame.paintEvent(self,event)
+		
+	#Function to create background flashing
+	def flash(self):
+		pal = QPalette()
+		for i in range(0,5):
+			pal.setColor(QPalette.Background, Qt.red)
+			self.setPalette(pal)
+			sleep(500)
+			pal.setColor(QPalette.Background, Qt.lightGray)
+			self.setPalette(pal)
+		

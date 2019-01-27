@@ -4,7 +4,9 @@
 from PyQt5.QtWidgets import QMainWindow, QWidget, QPushButton
 from Template import *
 from Settings import *
+from StratosButton import *
 
+#Displayed window with settings Menu etcs
 class MainWindow(QMainWindow):
 	def __init__(self):
 		super(MainWindow, self).__init__()
@@ -14,16 +16,10 @@ class MainWindow(QMainWindow):
 		self.createSettings()
 		self.show()
 	
+	# Helper function to create Settings Menu
 	def createSettings(self):
 		# Create Buttons
-		self.optionsButton = QPushButton("\u2261", self)
-		self.optionsButton.move(760, 0)
-		self.optionsButton.setFixedSize(40,40)
-		font = self.optionsButton.font()
-		font.setPointSize(30)
-		font.setBold(True)
-		self.optionsButton.setFont(font)
+		self.optionsButton = StratosButton("\u2261", 760, 0, self)
 		#ToDo: Create Settings Menu and connect it
 		self.settingsMenu = Settings(self)
-		self.settingsMenu.hide()
 		self.optionsButton.clicked.connect(self.settingsMenu.show)
