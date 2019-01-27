@@ -19,7 +19,7 @@ class MainWindow(QMainWindow):
 	# Helper function to create Settings Menu
 	def createSettings(self):
 		# Create Buttons
-		self.optionsButton = StratosButton("\u2261", 760, 0, self)
+		self.optionsButton = StratosButton("\u2261", 760, 0, False, self)
 		#ToDo: Create Settings Menu and connect it
 		self.settingsMenu = Settings(self)
 		self.optionsButton.clicked.connect(self.settingsMenu.show)

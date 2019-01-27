@@ -9,6 +9,7 @@ from StratosButton import *
 class Settings(QFrame):
 	def __init__(self, parent):
 		super(Settings, self).__init__(parent)
+		self.parentObj = parent
 		self.layout = QVBoxLayout()
 		self.setLayout(self.layout)
 		self.move(740,0)
@@ -25,13 +26,18 @@ class Settings(QFrame):
 		super(Settings, self).paintEvent(paintEvent)
 		
 	def createButtons(self):
-		self.hideButton = StratosButton("X", 10,10, self)
+		self.hideButton = StratosButton("X", 10,10, False, self)
 		self.hideButton.clicked.connect(self.hide)
-		self.moveButton = StratosButton("\u00BB", 10, 60, self)
-		self.resizeButton = StratosButton("\u21F2", 10, 110, self)
-		self.nextTempButton = StratosButton(">", 10, 160, self)
-		self.prevTempButton = StratosButton("<", 10, 210, self)
-		self.moduleAddButton = StratosButton("+", 10, 260, self)
-		self.moduleDelButton = StratosButton("-", 10, 310, self)
-		self.tempAddButton = StratosButton("+", 10, 360, self)
-		self.tempDelButton = StratosButton("-", 10, 410, self)
+		self.moveButton = StratosButton("\u00BB", 10, 60, True, self)
+		self.moveButton.clicked.connect(self.setMove)
+		self.resizeButton = StratosButton("\u21F2", 10, 110, True, self)
+		self.nextTempButton = StratosButton(">", 10, 160, False, self)
+		self.prevTempButton = StratosButton("<", 10, 210, False, self)
+		self.moduleAddButton = StratosButton("+", 10, 260, False, self)
+		self.moduleDelButton = StratosButton("-", 10, 310, False, self)
+		self.tempAddButton = StratosButton("+", 10, 360, False, self)
+		self.tempDelButton = StratosButton("-", 10, 410, False, self)
+		
+	def setMove(self):
+		#for x in self.parentObj.currentTemplate.widgetList:
+		#	x.dragMoveEvent.connect(x.move)

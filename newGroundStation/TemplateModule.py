@@ -3,11 +3,11 @@
 
 #Superclass of all custom stratos widgets, sets style etc
 from PyQt5.QtWidgets import QFrame
-from PyQt5.QtGui import QPainter, QPalette, QColor, QFont
+from PyQt5.QtGui import QPainter, QPalette, QColor, QFont #, QDragMoveEvent
 from PyQt5.QtCore import *
 from time import sleep
 
-class TemplateModule(QFrame):
+class TemplateModule(QFrame): #, QDragMoveEvent):
 	def __init__(self, name, height, width, parent):
 		super(TemplateModule, self).__init__(parent)
 		self.name = name
@@ -36,7 +36,6 @@ class TemplateModule(QFrame):
 		for i in range(0,5):
 			pal.setColor(QPalette.Background, Qt.red)
 			self.setPalette(pal)
-			sleep(500)
 			pal.setColor(QPalette.Background, Qt.lightGray)
 			self.setPalette(pal)
 		
