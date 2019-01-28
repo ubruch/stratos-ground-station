@@ -29,7 +29,6 @@ class Settings(QFrame):
 		self.hideButton = StratosButton("X", 10,10, False, self)
 		self.hideButton.clicked.connect(self.hide)
 		self.moveButton = StratosButton("\u00BB", 10, 60, True, self)
-		self.moveButton.clicked.connect(self.setMove)
 		self.resizeButton = StratosButton("\u21F2", 10, 110, True, self)
 		self.nextTempButton = StratosButton(">", 10, 160, False, self)
 		self.prevTempButton = StratosButton("<", 10, 210, False, self)
@@ -38,6 +37,3 @@ class Settings(QFrame):
 		self.tempAddButton = StratosButton("+", 10, 360, False, self)
 		self.tempDelButton = StratosButton("-", 10, 410, False, self)
 		
-	def setMove(self):
-		#for x in self.parentObj.currentTemplate.widgetList:
-		#	x.dragMoveEvent.connect(x.move)
