@@ -2,7 +2,7 @@
 #edited by jwenner
 
 from PyQt5.QtWidgets import QMainWindow, QWidget, QPushButton
-from Template import *
+import Template
 from Settings import *
 from StratosButton import *
 

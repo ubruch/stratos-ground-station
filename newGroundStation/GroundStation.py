@@ -2,7 +2,7 @@
 #edited by jwenner
 
 from PyQt5.QtWidgets import QApplication
-from MainWindow import *
+import MainWindow
 
 #Entry Point
 
